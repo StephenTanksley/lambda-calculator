@@ -34,7 +34,24 @@ function App() {
 
   const addSpecial = (special) => {
     console.log(special);
+    if (special === "C"){ 
+      setDisplayValue('')
+    }
+    
+    if (special === "+/-"){
+      if (displayValue > 0){
+        setDisplayValue(-Math.abs(displayValue))}
+    }  
+
+      if (displayValue < 0){
+        setDisplayValue(Math.abs(displayValue))
+    }
+
+    if (special === "%"){
+      setDisplayValue(displayValue / 100)
+    }
   }
+
   return (
     <div className="container">
       <Logo />
@@ -43,7 +60,7 @@ function App() {
       <Display number = {displayValue} />
       <Numbers addNumber = {addNumber}/>
       <Operators addOperator={addOperator}/>
-      <Specials />
+      <Specials addSpecial = {addSpecial}/>
       </div>
     </div>
   );

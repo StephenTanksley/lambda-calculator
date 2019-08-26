@@ -18,6 +18,7 @@ const Specials = (props) => {
 
        {specials.map(special => <SpecialButton text = {special} 
                                                key={special}
+                                               addSpecial={props.addSpecial}
       /> )}
     </div>
   );
