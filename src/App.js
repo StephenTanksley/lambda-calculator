@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./App.scss";
 // STEP 4 - import the button and display components
 import Numbers from "./components/ButtonComponents/NumberButtons/Numbers"
 import Operators from "./components/ButtonComponents/OperatorButtons/Operators.js"
@@ -18,7 +18,7 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
-  const [displayValue, setDisplayValue] = useState("")
+  const [displayValue, setDisplayValue] = useState("0")
 
   const addNumber = (number) => {
     setDisplayValue(displayValue => displayValue + number) 
@@ -37,15 +37,16 @@ function App() {
     if (special === "C"){ 
       setDisplayValue('')
     }
-    
+
+
     if (special === "+/-"){
       if (displayValue > 0){
         setDisplayValue(-Math.abs(displayValue))}
     }  
-
       if (displayValue < 0){
         setDisplayValue(Math.abs(displayValue))
     }
+
 
     if (special === "%"){
       setDisplayValue(displayValue / 100)
