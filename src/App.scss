@@ -1,23 +1,43 @@
 .container {
     display: flex;
     margin: 0 auto;
+    margin-top: 1rem;
     width: 70%;
     border-radius: 1rem;
     padding: 1.5rem;
     background-color: red;
 }
 
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 .display {
     display: flex;
     height: 3.5rem;
-    width: 10rem;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
     border-radius: 3rem;
     background-color: darkslategray;
     color: white;
+    margin-top: 3rem;
+    padding: .5rem;
+    font-size: 2rem;
+}
+
+.logo-container {
+    display: block;
+    height: 3rem;
+    width: 40%;
 }
 
 .numbers-button {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 3.5rem;
@@ -25,4 +45,6 @@
     border-radius: 3.5rem;
     background-color: rgb(151, 148, 148);
     color: white;
+    box-shadow: 1rem;
+    padding: 1rem;
 }

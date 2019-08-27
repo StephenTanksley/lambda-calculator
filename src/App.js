@@ -18,7 +18,7 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
-  const [displayValue, setDisplayValue] = useState("0")
+  const [displayValue, setDisplayValue] = useState(" ")
 
   const addNumber = (number) => {
     setDisplayValue(displayValue => displayValue + number) 
@@ -27,7 +27,7 @@ function App() {
   const addOperator = (operator) => {
     if (operator === '='){
       setDisplayValue(displayValue => eval(displayValue));
-    }else {
+    }else{
       setDisplayValue(displayValue => displayValue + " " + operator + " ")
     }
   }
@@ -35,7 +35,7 @@ function App() {
   const addSpecial = (special) => {
     console.log(special);
     if (special === "C"){ 
-      setDisplayValue('')
+      setDisplayValue(" ")
     }
 
 
@@ -68,3 +68,6 @@ function App() {
 }
  
 export default App;
+
+//known bugs - if you prefix a number with 0 when trying to perform an operation, it will throw an error.scss
+//ex - 085.9 + 2856 = ERROR. It doesn't know to ignore the first 0 yet.
