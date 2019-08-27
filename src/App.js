@@ -58,10 +58,16 @@ function App() {
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-      <Display number = {displayValue} />
-      <Numbers addNumber = {addNumber}/>
-      <Operators addOperator={addOperator}/>
-      <Specials addSpecial = {addSpecial}/>
+        <Display number = {displayValue} />      
+      <div className = 'button-container'>
+        <div className = 'left-container'>
+          <Specials addSpecial = {addSpecial} />
+          <Numbers addNumber = {addNumber}  />
+        </div>  
+        <div className = 'right-container'>
+          <Operators addOperator={addOperator} />
+        </div>
+      </div>
       </div>
     </div>
   );
@@ -71,3 +77,7 @@ export default App;
 
 //known bugs - if you prefix a number with 0 when trying to perform an operation, it will throw an error.scss
 //ex - 085.9 + 2856 = ERROR. It doesn't know to ignore the first 0 yet.
+
+//use flex-wrap to get the numbers 
+
+//justify-content: space-between;

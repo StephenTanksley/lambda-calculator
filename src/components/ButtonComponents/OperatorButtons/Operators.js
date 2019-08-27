@@ -13,7 +13,8 @@ const Operators = (props) => {
       
       {operators.map(operator => <OperatorButton operator = {operator} 
                                                  key={operator.char} 
-                                                 addOperator = {props.addOperator}/>)}
+                                                 addOperator = {props.addOperator}
+                                                 className = {operator}/>)}
 
     </div>
   );
